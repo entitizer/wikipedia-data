@@ -21,11 +21,11 @@ function saveData(data) {
 		}
 	}
 
-	var file = path.join(__dirname, '..', 'disambiguation-names.json');
-	fs.writeFileSync(file, JSON.stringify(names, null, 2));
+	var file = path.join(__dirname, '../data', 'disambiguation-names.json');
+	fs.writeFileSync(file, JSON.stringify(names, null, 2) + '\n');
 
-	file = path.join(__dirname, '..', 'disambiguation-names2.json');
-	fs.writeFileSync(file, JSON.stringify(names2, null, 2));
+	file = path.join(__dirname, '../data', 'disambiguation-names2.json');
+	fs.writeFileSync(file, JSON.stringify(names2, null, 2) + '\n');
 }
 
 function start() {
