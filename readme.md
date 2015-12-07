@@ -33,3 +33,11 @@ Disambiguation category by language:
 ### disambiguation-categories2.json
 
 Same as `disambiguation-categories.json` only for 2 chars language codes.
+
+## Nodejs usage:
+
+```
+var wikiData = require('wikipedia-data');
+var categories = wikiData.getDisambiguationCategories2();
+var names = wikiData.getDisambiguationNames2();
+```
