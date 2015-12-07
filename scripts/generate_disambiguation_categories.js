@@ -5,13 +5,13 @@ var path = require('path');
 var fs = require('fs');
 
 function saveData(data) {
-	var reg = /<li class="interlanguage-link interwiki-([^"]+)">\s*<a href="[^:]+:([^"]+)"/gi;
+	var reg = /<li class="interlanguage-link interwiki-([^"]+)">\s*<a href="\/\/[^.]+.wikipedia.org\/wiki\/([^"]+)"/gi;
 	var result;
 	var names = {
-		en: 'Disambiguation'
+		en: 'Category:Disambiguation_pages'
 	};
 	var names2 = {
-		en: 'Disambiguation'
+		en: 'Category:Disambiguation_pages'
 	};
 	var lang, name;
 	while ((result = reg.exec(data)) !== null) {
@@ -25,10 +25,10 @@ function saveData(data) {
 		}
 	}
 
-	var file = path.join(__dirname, '../data', 'disambiguation-names.json');
+	var file = path.join(__dirname, '../data', 'disambiguation-categories.json');
 	fs.writeFileSync(file, JSON.stringify(names, null, 2) + '\n');
 
-	file = path.join(__dirname, '../data', 'disambiguation-names2.json');
+	file = path.join(__dirname, '../data', 'disambiguation-categories2.json');
 	fs.writeFileSync(file, JSON.stringify(names2, null, 2) + '\n');
 }
 
@@ -36,7 +36,7 @@ function start() {
 	var req = http.request({
 		host: 'en.wikipedia.org',
 		port: 443,
-		path: '/wiki/Template:Disambiguation'
+		path: '/wiki/Category:Disambiguation_pages'
 	}, function(res) {
 		res.setEncoding('utf8');
 		var data = '';

@@ -23,4 +23,24 @@ describe('all data', function() {
 			}
 		}
 	});
+
+	it('should return disambiguation-categories', function() {
+		var data = info.getDisambiguationCategories();
+		assert.ok(data);
+		for (var lang in data) {
+			if (lang === 'vo') {
+				assert.equal('Klad:Telplänovapads', data[lang]);
+			}
+		}
+	});
+
+	it('should return disambiguation-categories2', function() {
+		var data = info.getDisambiguationCategories2();
+		assert.ok(data);
+		for (var lang in data) {
+			if (lang === 'vo') {
+				assert.equal('Klad:Telplänovapads', data[lang]);
+			}
+		}
+	});
 });
