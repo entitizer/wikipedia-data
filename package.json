@@ -1,0 +1,29 @@
+{
+  "name": "wikipedia-data",
+  "version": "0.0.1",
+  "description": "Useful Wikipedia data",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entitizer/wikipedia-data.git"
+  },
+  "keywords": [
+    "wikipedia",
+    "wiki",
+    "data",
+    "information"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/entitizer/wikipedia-data/issues"
+  },
+  "homepage": "https://github.com/entitizer/wikipedia-data#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
+}
