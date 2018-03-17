@@ -5,7 +5,7 @@ var path = require('path');
 var fs = require('fs');
 
 function saveData(data) {
-	var reg = /<li class="interlanguage-link interwiki-([^"]+)">\s*<a href="\/\/[^.]+.wikipedia.org\/wiki\/([^"]+)"/gi;
+	var reg = /<li class="interlanguage-link interwiki-([^"]+)"[^>]*>\s*<a href="[^\.]+.wikipedia.org\/wiki\/([^"]+)"/gi;
 	var result;
 	var names = {
 		en: 'Category:Disambiguation_pages'
