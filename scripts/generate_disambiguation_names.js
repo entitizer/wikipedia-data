@@ -5,7 +5,7 @@ var path = require('path');
 var fs = require('fs');
 
 function saveData(data) {
-	var reg = /<li class="interlanguage-link interwiki-([^"]+)">\s*<a href="[^:]+:([^"]+)"/gi;
+	var reg = /<li class="interlanguage-link interwiki-([^"]+)">\s*<a href="[^"]+:([^"]+)"/gi;
 	var result;
 	var names = {
 		en: 'Disambiguation'
